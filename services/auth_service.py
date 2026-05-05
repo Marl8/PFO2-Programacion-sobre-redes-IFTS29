@@ -2,6 +2,8 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from repositories.user_repository import create_user, get_user_by_username
 import sqlite3
 
+
+# Registrar usuario
 def register_user(usuario, password):
     hashed = generate_password_hash(password)
 
@@ -9,9 +11,10 @@ def register_user(usuario, password):
         create_user(usuario, hashed)
         return {"mensaje": "Usuario creado"}, 201
     except sqlite3.IntegrityError:
-        return {"error": "Usuario ya existe"}, 400
+        return {"error": "Usuario ya existente"}, 400
 
 
+# Login
 def login_user(usuario, password):
     user = get_user_by_username(usuario)
 
@@ -20,6 +23,7 @@ def login_user(usuario, password):
     return {"error": "Credenciales inválidas"}, 401
 
 
+# Autenticar usuario
 def authenticate_user(usuario, password):
     user = get_user_by_username(usuario)
 

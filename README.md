@@ -67,3 +67,13 @@ python client.py
 - Persistencia con SQLite.
 - Hash de contraseñas utilizando la biblioteca `werkzeug.security`.
 - Cliente en consola.
+
+### Usuarios de Prueba registrados en el sistema
+
+- **Username:** "admin"
+
+    **Password:** "admin"
+
+- **Username:** "nombre"
+
+    **Password:** "1234"
