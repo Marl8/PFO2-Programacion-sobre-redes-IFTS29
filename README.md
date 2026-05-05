@@ -4,6 +4,7 @@ El proyecto fue realizado como práctica formativa obligatoria en el marco de la
 
 ### Estructura del proyecto
 
+```text
 PFO 2/
 │── app.py
 │
@@ -28,6 +29,7 @@ PFO 2/
 │   └── auth_routes.py
 │
 └── PFO2.db
+```
 
 ### ⚙️ Instalación
 
@@ -35,6 +37,7 @@ PFO 2/
 
 ````bash
 git clone https://github.com/Marl8/PFO2-Programacion-sobre-redes-IFTS29.git
+cd proyecto
 ````
 **2.** Instalar dependencias
 
