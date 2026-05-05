@@ -42,9 +42,12 @@ def tareas():
     <p>Sistema de tareas funcionando...</p>
     """
     
+# Si no esta autenticado envia un código 401 y un encabezado "WWW-Authenticate" del tipo Basic
+# al navegador para activar su mecanismo de autenticación y poder ingresar las credenciales
+# para el acceso al sistema 
 def unauthorized():
     return Response(
         "No autorizado",
         401,
-        {"WWW-Authenticate": 'Basic realm="Login requerido"'}
+        {"WWW-Authenticate": 'Basic realm="Login requerido"'} 
     )    
