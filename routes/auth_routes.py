@@ -33,8 +33,7 @@ def tareas():
     auth = request.authorization
 
     if not auth:
-        return unauthorized()
-    
+        return unauthorized()    
     user = authenticate_user(auth.username, auth.password)
 
     if not user:

@@ -14,6 +14,9 @@ app.teardown_appcontext(close_db)
 def principal():
     return """
     <h1>Inicie sesión para ingresar al sistema</h1>
+    <a href="/tareas">
+        <button>Ingresar al sistema</button>
+    </a>
     """
 
 if __name__ == "__main__":
